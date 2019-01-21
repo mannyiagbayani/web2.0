@@ -7,6 +7,12 @@ app.use(bodyparser.json());
 app.post("/",(req,res) => {
     var email = req.body.email;
     var amount = req.body.amount;
+
+    //validation 
+    if(amount <= 1) {
+        res.send({"error": "true", "message" : "Amount should be greater than 1"});
+    }
+    
     res.send({"email": email, "amount": amount});
 });
 
