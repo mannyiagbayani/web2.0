@@ -10,4 +10,4 @@ app.post("/",(req,res) => {
     res.send({"email": email, "amount": amount});
 });
 
-app.listen(3000 , () => console.log("listening to port 3000"));
+app.listen(3000 , () => console.log("listening to port http://localhost:3000"));
