@@ -3,8 +3,8 @@ const mysql = require("mysql");
 const db_config = {
     host: "127.0.0.1",
     user: "root",
-    database: "web2.0",
-    password: "testweb2.0"
+    database: "webapp",
+    password: "k--z"
 };
 
 var connection;
