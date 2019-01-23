@@ -13,4 +13,16 @@ save_user_information = (data) => new Promise((resolve,reject) => {
 });
 
 
-module.exports = {save_user_information}
+get_total_information = () => new Promise((resolve,reject) => {
+    db.query("SELECT SUM(amount) as Total from lottery_information",null,(err, result,fields) => {
+        if(err) {
+            console.log("get_total_information failed",err)
+            reject(err)
+        } else {
+            console.log("get_total_information ok")
+            resolve(result)
+        }
+    })
+});
+
+module.exports = {save_user_information, get_total_information}
